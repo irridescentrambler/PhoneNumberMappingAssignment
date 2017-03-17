@@ -29,7 +29,7 @@ class TelephoneDictionary
 		end while(@isValid)
 	end
 
-	def find_mathing_combination_of_digit
+	def find_matching_combination_of_digit
 		# Create new array of telephone number using telephone_number_map
 		new_telphone_destionary = @str.scan(/[2-9]/).map { |a| @telephone_number_map[:"#{a}"] }
 
