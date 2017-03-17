@@ -1,5 +1,4 @@
 require 'set'
-require 'benchmark'
 
 class TelephoneDictionary
 	attr_accessor :telephone_number_map, :str, :isValid
@@ -23,11 +22,11 @@ class TelephoneDictionary
 			@str = gets.chomp
 			if /\A[2-9]{10}\z/.match(@str)
 				puts "valid"
-				isValid = false
+				@isValid = false
 			else
 				puts "Please enter a valid number"
 			end
-		end while(isValid)
+		end while(@isValid)
 	end
 
 	def find_mathing_combination_of_digit
@@ -54,8 +53,3 @@ class TelephoneDictionary
 	end
 
 end	
-
-#telephone_dictionary = TelephoneDictionary.new
-#telephone_dictionary.get_input
-#p Benchmark.measure{telephone_dictionary.find_mathing_combination_of_digit}
-#p telephone_dictionary.find_mathing_combination_of_digit
