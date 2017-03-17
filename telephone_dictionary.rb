@@ -2,6 +2,7 @@ require 'set'
 require 'benchmark'
 
 class TelephoneDictionary
+	attr_accessor :telephone_number_map, :str, :isValid
 	def initialize
 		@telephone_number_map = {
     '2': ['a', 'b', 'c'],
