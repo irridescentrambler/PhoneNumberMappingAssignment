@@ -5,7 +5,7 @@ RSpec.describe do
 	describe "Tests the TelephoneDictionary class" do
 		before(:all) do
 			@telephone_dictionary = TelephoneDictionary.new
-		end	
+		end
 
 		it "Tests the initialize method" do
 			expect(@telephone_dictionary).to_not be_nil
@@ -19,7 +19,7 @@ RSpec.describe do
 		it "Tests the #find_mathing_combination_of_digit method" do
 			@telephone_dictionary.instance_variable_set(:@str, "6686787825")
 			expect(@telephone_dictionary.find_matching_combination_of_digit).to eq([["motor", "truck"], ["motor", "usual"], ["noun", "struck"], ["nouns", "truck"], ["nouns", "usual"], ["onto", "struck"], "motortruck"])
-		end	
+		end
 	end
 end
 
